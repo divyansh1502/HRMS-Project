@@ -1,0 +1,85 @@
+<html lang="en" th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+	<main>
+        <section class="container my-4">
+            <div class="employee-banner">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="d-flex align-items-center">
+                            <div class="banner-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h1 class="fw-bold text-white mb-1">View Enquiries</h1>
+                                <p class="text-white mb-0 opacity-75">Manage and respond to customer enquiries and inquiries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
+                        <a href="#" class="btn dashboard-btn px-4 py-3 rounded-4">
+                            <i class="fa-solid fa-arrow-left me-2"></i>Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5">
+            <div class="table-card">
+                <div th:if="${msg}" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i>
+                    <span th:text="${msg}"></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th class="id-column">ID</th>
+                                <th>Name</th>
+                                <th>Email Address</th>
+                                <th>Contact No.</th>
+                                <th>Address</th>
+                                <th>Enquiry</th>
+                                <th class="action-column">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:if="${#lists.isEmpty(enquiries)}">
+                                <td colspan="7" class="text-center py-5">
+                                    <i class="fa-solid fa-inbox fs-1 text-muted mb-3 d-block"></i>
+                                    <p class="text-muted fs-5">No enquiries found.</p>
+                                </td>
+                            </tr>
+                            <tr th:each="e : ${enquiries}">
+                                <td class="id-column">
+                                    <span class="badge bg-primary" th:text="${e.id}"></span>
+                                </td>
+                                <td>
+                                    <strong th:text="${e.name}"></strong>
+                                </td>
+                                <td th:text="${e.emailaddress}"></td>
+                                <td th:text="${e.contactno}"></td>
+                                <td>
+                                    <small th:text="${e.address}"></small>
+                                </td>
+                                <td>
+                                    <small class="text-muted" th:text="${#strings.abbreviate(e.enquirytext, 50)}"></small>
+                                </td>
+                                <td class="action-column">
+                                    <a th:href="@{/admin/deleteenquiries(id=${e.id})}" 
+                                       class="btn btn-sm btn-danger rounded-pill"
+                                       onclick="return confirm('Are you sure?');">
+                                        <i class="fa-solid fa-trash me-1"></i>Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

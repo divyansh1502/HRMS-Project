@@ -1,0 +1,799 @@
+/* Admin CSS - copied from user styles to keep consistent design */
+
+body{
+    background:#f4f6fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand h5{
+    font-size:22px;
+}
+
+.nav-link{
+    color:#444;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#3d5afe;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#3d5afe,#7b2cff);
+    border:none;
+}
+
+.btn-primary:hover{
+    background:linear-gradient(90deg,#2d4cff,#6a1bff);
+}
+/* Sidebar */
+
+.sidebar{
+    min-height:100vh;
+    background:linear-gradient(180deg,#1f6bff,#6a11cb);
+}
+
+.profile-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid rgba(255,255,255,.4);
+}
+
+.side-link{
+    color:#fff;
+    border-radius:10px;
+    padding:12px 15px;
+    transition:.3s;
+}
+
+.side-link:hover{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
+
+.active-menu{
+    background:rgba(255,255,255,.25);
+    color:#fff;
+    border-radius:10px;
+    padding:12px 15px;
+}
+
+.side-link i,
+.active-menu i{
+    width:22px;
+}
+/* Dashboard Header */
+
+.user-circle{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#4f46e5;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Welcome Banner */
+
+.banner-card{
+    background:linear-gradient(90deg,#1e6bff,#662dff);
+    overflow:hidden;
+}
+
+.banner-card p{
+    max-width:650px;
+}
+
+.mini-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:15px;
+    padding:25px;
+    color:#fff;
+    backdrop-filter:blur(6px);
+    transition:.3s;
+}
+
+.mini-box:hover{
+    transform:translateY(-5px);
+}
+/* Statistics Cards */
+
+.stat-card{
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-6px);
+}
+
+.stat-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:24px;
+}
+/* Quick Actions */
+
+.action-card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:18px;
+    transition:.3s;
+    height:100%;
+}
+
+.action-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.action-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    color:#fff;
+    font-size:28px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+/* Progress Section */
+
+.progress{
+    border-radius:20px;
+    background:#eef2f7;
+}
+
+.progress-bar{
+    border-radius:20px;
+}
+
+/* Career Tips */
+
+.tip-box{
+    background:#f8f9fa;
+    border-left:4px solid #0d6efd;
+    border-radius:10px;
+    padding:12px 15px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.tip-box:hover{
+    background:#eef5ff;
+    transform:translateX(5px);
+}
+/* Recent Activity */
+
+.activity-item{
+    padding:18px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.activity-item:last-child{
+    border-bottom:none;
+}
+
+.activity-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+/* Support Card */
+
+.support-card{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+}
+
+.support-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/*======================
+    APPLIED JOBS PAGE
+=======================*/
+
+.employee-banner {
+    background: linear-gradient(90deg, #1d74f5, #6128ff, #8c2cff);
+    border-radius: 28px;
+    padding: 40px 35px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+}
+
+.banner-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+}
+
+.employee-banner h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+.employee-banner p {
+    color: rgba(255, 255, 255, .75);
+    font-size: .95rem;
+    margin: 0;
+}
+
+.add-btn {
+    background: #fff;
+    color: #2768ff;
+    font-weight: 600;
+    border-radius: 24px;
+    transition: .3s;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+}
+
+.dashboard-btn {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    transition: .3s;
+}
+
+.dashboard-btn:hover {
+    background: #fff;
+    color: #5b2cff;
+}
+
+/*======================
+    TABLE STYLING
+=======================*/
+
+.table-card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.table-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.table-card i {
+    color: #1d74f5;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table thead th {
+    background: linear-gradient(90deg, #1d74f5, #4c2cff, #7928ff);
+    color: #fff;
+    padding: 16px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+}
+
+.table thead th:first-child {
+    border-top-left-radius: 12px;
+    padding-left: 18px;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 12px;
+    padding-right: 18px;
+}
+
+.table tbody td {
+    padding: 14px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: .9rem;
+    color: #444;
+}
+
+.table tbody td:first-child {
+    padding-left: 18px;
+    font-weight: 600;
+    color: #1d74f5;
+}
+
+.table tbody td:last-child {
+    padding-right: 18px;
+}
+
+.table tbody td.fw-semibold {
+    color: #1d74f5;
+    font-weight: 700;
+}
+
+.table tbody tr {
+    transition: background-color .2s ease;
+    background: #fff;
+}
+
+.table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+/*======================
+    EMPTY STATE
+=======================*/
+
+.table tbody tr td[colspan] {
+    color: #999;
+    font-style: italic;
+}
+
+/*======================
+    POST JOB PAGE
+=======================*/
+
+.employee-banner {
+    background: linear-gradient(90deg, #1d74f5, #6128ff, #8c2cff);
+    border-radius: 28px;
+    padding: 40px 35px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+}
+
+.banner-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+}
+
+.employee-banner h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+.employee-banner p {
+    color: rgba(255, 255, 255, .75);
+    font-size: .95rem;
+    margin: 0;
+}
+
+.dashboard-btn {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    transition: .3s;
+}
+
+.dashboard-btn:hover {
+    background: #fff;
+    color: #5b2cff;
+}
+
+/*======================
+    FORM STYLING
+=======================*/
+
+.form-card {
+    max-width: 840px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .10);
+}
+
+.form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d74f5;
+    margin: 0;
+}
+
+.form-card i {
+    color: #1d74f5;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.form-input-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-left: 14px;
+    border: 1.5px solid #e6ecf2;
+    border-radius: 12px;
+    background: #fff;
+    transition: .2s;
+}
+
+.form-input-wrapper i {
+    width: 20px;
+    color: #1d74f5;
+    font-size: .95rem;
+    flex: 0 0 20px;
+}
+
+.form-input-wrapper .form-control {
+    min-height: 46px;
+    border: none;
+    box-shadow: none;
+    padding-left: 10px;
+    font-size: .9rem;
+}
+
+.form-input-wrapper .form-control::placeholder {
+    color: #999;
+}
+
+.form-input-wrapper .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.form-input-wrapper:focus-within {
+    border-color: #1d74f5;
+    box-shadow: 0 0 0 3px rgba(29, 116, 245, .12);
+}
+
+.form-input-wrapper.textarea-wrapper {
+    min-height: auto;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.form-input-wrapper.textarea-wrapper i {
+    padding-top: 12px;
+    padding-left: 14px;
+}
+
+.form-input-wrapper.textarea-wrapper textarea {
+    min-height: 130px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.form-input-wrapper.select-wrapper {
+    padding: 0;
+}
+
+.form-input-wrapper.select-wrapper select {
+    min-height: 46px;
+    padding-left: 10px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231d74f5' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+}
+
+.job-form {
+    margin-top: 24px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #e6ecf2;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #1d74f5, #6929ff);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(56, 90, 255, .30);
+    transition: .3s;
+    font-size: .95rem;
+    padding: 10px 32px !important;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(56, 90, 255, .40);
+}
+
+.alert {
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    font-size: .9rem;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+/*======================
+    RESPONSIVE DESIGN
+=======================*/
+
+@media (max-width: 991px) {
+    .employee-banner {
+        padding: 30px 25px;
+    }
+
+    .employee-banner h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-card {
+        padding: 24px;
+    }
+
+    .form-label {
+        font-size: .9rem;
+    }
+
+    .form-input-wrapper {
+        min-height: 44px;
+    }
+
+    .form-input-wrapper .form-control {
+        min-height: 42px;
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .employee-banner {
+        padding: 24px 20px;
+    }
+
+    .employee-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .form-input-wrapper {
+        min-height: 42px;
+    }
+
+    .form-input-wrapper .form-control {
+        min-height: 40px;
+        font-size: .8rem;
+    }
+
+    .form-input-wrapper i {
+        width: 18px;
+        font-size: .85rem;
+    }
+
+    .submit-btn {
+        padding: 8px 24px !important;
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .employee-banner {
+        padding: 20px 15px;
+    }
+
+    .employee-banner h1 {
+        font-size: 1.3rem;
+    }
+
+    .employee-banner p {
+        display: none;
+    }
+
+    .banner-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        flex: 0 0 40px;
+    }
+
+    .form-card {
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    .form-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .form-label {
+        font-size: .85rem;
+        margin-bottom: 6px;
+    }
+
+    .form-input-wrapper {
+        min-height: 40px;
+    }
+
+    .form-input-wrapper .form-control {
+        min-height: 38px;
+        font-size: .75rem;
+        padding: 6px 8px;
+    }
+
+    .form-input-wrapper i {
+        width: 16px;
+        font-size: .75rem;
+        padding-left: 10px;
+    }
+
+    .form-input-wrapper.textarea-wrapper textarea {
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 10px 16px !important;
+        font-size: .8rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        margin-top: 6px;
+        padding-top: 16px;
+    }
+}
+
+
+/* ================= Footer ================= */
+
+.footer-icon{
+    width:42px;
+    height:42px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    background:#f1f3f5;
+    color:#4f46e5;
+    margin-left:8px;
+    transition:.3s;
+}
+
+.footer-icon:hover{
+    background:#4f46e5;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* Smooth Hover */
+
+.card{
+    transition:.3s;
+}
+
+.card:hover{
+    box-shadow:0 12px 30px rgba(0,0,0,.08)!important;
+}
+
+/* Responsive */
+
+@media (max-width:991px){
+
+    .sidebar{
+        min-height:auto;
+    }
+
+    .banner-card h2{
+        font-size:28px;
+    }
+
+    .mini-box{
+        margin-top:15px;
+    }
+
+    .stat-icon,
+    .action-icon{
+        width:60px;
+        height:60px;
+        font-size:22px;
+    }
+
+    .support-icon{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+}
+
+@media (max-width:576px){
+
+    .banner-card{
+        text-align:center;
+    }
+
+    .user-circle{
+        width:40px;
+        height:40px;
+    }
+
+    .footer-icon{
+        margin:5px;
+    }
+}

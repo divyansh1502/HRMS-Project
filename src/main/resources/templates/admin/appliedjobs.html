@@ -1,0 +1,76 @@
+<html lang="en" th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+	<main>
+		 <section class="container my-4">
+            <div class="employee-banner">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="d-flex align-items-center">
+                            <div class="banner-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h1 class="fw-bold text-white mb-1">Applied Jobs</h1>
+                                <p class="text-white mb-0 opacity-75">View and manage all job applications from candidates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
+                        <a href="#" class="btn btn-light px-4 py-3 rounded-4 fw-semibold add-btn">
+                            <i class="fa-solid fa-download me-2"></i>Export
+                        </a>
+                        <a href="#" class="btn dashboard-btn px-4 py-3 rounded-4">
+                            <i class="fa-solid fa-arrow-left me-2"></i>Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5">
+            <div class="table-card">
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fa-solid fa-users-line fs-2 me-3 text-dark"></i>
+                    <h2 class="fw-bold mb-0">Job Applications</h2>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Job ID</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                                <th>Contact No.</th>
+                                <th>Email Address</th>
+                                <th>Qualification</th>
+                                <th>Experience</th>
+                                <th>Key Skills</th>
+                                <th>Applied Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="j : ${aj}">
+                                <td th:text="${j.id}"></td>
+                                <td th:text="${j.jobid}"></td>
+                                <td class="fw-semibold" th:text="${j.title}"></td>
+                                <td th:text="${j.name}"></td>
+                                <td th:text="${j.contactno}"></td>
+                                <td th:text="${j.emailaddress}"></td>
+                                <td th:text="${j.qualification}"></td>
+                                <td th:text="${j.experience}"></td>
+                                <td th:text="${j.keyskill}"></td>
+                                <td th:text="${j.applieddate}"></td>
+                            </tr>
+                            <tr th:if="${#lists.isEmpty(aj)}">
+                                <td colspan="10" class="text-center py-4 text-muted">No job applications yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+	</main>
+</body>
+</html>

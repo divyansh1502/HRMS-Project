@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout(admincontent)">
+<!-- [Head] start -->
+
+<head>
+<title>Admin Dashboard</title>
+<!-- [Meta] -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+window.addEventListener("pageshow", function (event) {
+   if(event.peristed ||
+   perform.getEntryByType("navigation")[0]?.type
+   === "back_forward") {
+	window.location.reload();
+	}
+});
+</script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Admin Custom CSS -->
+    <link rel="stylesheet" href="/admin/css/style.css">
+    <link rel="icon" type="image/png" href="/admin/images/favicon.jpg">
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+<main>
+ <!-- ================= Navbar Start ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container-fluid px-4">
+
+            <!-- Logo -->
+            <a href="logo.jpg" class="navbar-brand d-flex align-items-center">
+
+                <img src="images/logo.jpg" alt="Logo" width="55" height="55"
+                    class="rounded-circle border me-2">
+
+                <div>
+                    <h5 class="fw-bold text-primary mb-0">HR Synergy</h5>
+                    <small class="text-muted">HR Management System</small>
+                </div>
+
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link fw-semibold px-3">Home</a>
+                    </li>
+
+                   
+
+                    <li class="nav-item">
+                        <a href="joinus" class="nav-link fw-semibold px-3">Join Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="aboutus" class="nav-link fw-semibold px-3">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/contactus" class="nav-link fw-semibold px-3">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="/user/logout" class="btn btn-primary rounded-pill px-4">
+                            <i class="fa-solid fa-right-to-bracket me-2"></i>
+                            Log Out
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ================= Navbar End ================= -->
+        <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <div class="col-sm-3  p-0"style="position:sticky; top:0px; z-index:900;">
+
+                <div class="sidebar text-white d-flex flex-column">
+
+                    <!-- Brand -->
+                    <div class="p-3 border-bottom border-secondary">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-shield-halved fs-3 me-2"></i>
+
+                            <div>
+                                <h5 class="mb-0 fw-bold">HR Synergy</h5>
+                                <small>Admin Panel</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile -->
+                    <div class="text-center py-4">
+
+                        <div class="profile-icon mx-auto mb-3">
+                            <i class="fa-solid fa-user fs-2"></i>
+                        </div>
+
+                        <h6 class="fw-bold mb-1">Welcome Admin</h6>
+
+                        <span class="badge bg-success rounded-pill">
+                            Administrator
+                        </span>
+
+                    </div>
+
+                    <hr class="text-light mx-3">
+
+                    <!-- Navigation -->
+                    <div class="px-3">
+
+                        <small class="text-uppercase text-light opacity-75">
+                            Navigation
+                        </small>
+
+                        <ul class="nav flex-column mt-3">
+
+                            <li class="nav-item mb-2">
+                                <a href="/admin" class="nav-link active-menu">
+                                    <i class="fa-solid fa-chart-pie me-2"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a href="/admin/jobseeker" class="nav-link side-link">
+                                    <i class="fa-solid fa-users me-2"></i>
+                                     Job Seeker
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a href="/admin/postjob" class="nav-link side-link">
+                                    <i class="fa-solid fa-briefcase me-2"></i>
+                                    Post Job
+                                </a>
+                            </li>
+   <li class="nav-item mb-2">
+                                <a href="/admin/postedjob" class="nav-link side-link">
+                                    <i class="fa-solid fa-briefcase me-2"></i>
+                                    Posted Job
+                                </a>
+                            </li>
+ <li class="nav-item mb-2">
+                                <a href="/admin/appliedjobs" class="nav-link side-link">
+                                    <i class="fa-solid fa-briefcase me-2"></i>
+                                    Applied Job
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="/admin/enquiries" class="nav-link side-link">
+                                    <i class="fa-solid fa-file-lines me-2"></i>
+                                    Enquiries
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a href="/admin/viewfeedback" class="nav-link side-link">
+                                    <i class="fa-solid fa-chart-line me-2"></i>
+                                    Feedback
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="/admin/viewcomplaint" class="nav-link side-link">
+                                    <i class="fa-solid fa-chart-line me-2"></i>
+                                    Complaints
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="/admin/changeadminpwd" class="nav-link side-link">
+                                    <i class="fa-solid fa-chart-line me-2"></i>
+                                    Change Password
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a href="/admin/logout" class="nav-link side-link">
+                                    <i class="fa-solid fa-gear me-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Logout -->
+                    <div class="mt-auto p-3">
+                        <a href="/admin/logout">
+                            <button class="btn btn-outline-light w-100 rounded-pill">
+                                <i class="fa-solid fa-right-from-bracket me-2"></i>
+                                Logout
+                            </button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Main Content Starts -->
+            <div class="col-sm-9">
+
+                <div th:replace="${admincontent}"></div>
+
+            </div>
+            <!--================ Footer =================-->
+            
+        </div>
+    </div>
+    
+
+</main>
+</body>
+<!-- [Body] end -->
+
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karam - HRMS</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		.nav-link{
+			text-transform:uppercase !important;
+			font-size:15px;
+			font-weight:700;
+		}
+	</style>
+	<link rel="icon" type="image/png" href="/images/favicon.jpg">
+</head>
+ 
+  <body>
+    <div class="container-fluid">
+      <div class="row text-center  text-light bg fs4" style="background-color:#0f172a;">
+        <div class="col-sm-4 my-2">Contact Number:- 7309245782</div>
+        <div class="col-sm-4 my-2">Email:-hr@hrms.karam.in</div>
+        <div class="col-sm-4 my-2">Follow Us</div>
+      </div>
+      <div class="row mt-2" style="position:sticky; top:0px; z-index:999;">
+        <div class="col-sm-12">
+         <!--   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">HRMS</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/registration">Registration</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/adminlogin">Admin Login</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact Us</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>-->
+          <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img src="images/logo.jpg" width="45" class="me-2">
+            <div>
+                <h5 class="m-0 text-primary fw-bold">HR Synergy</h5>
+                <small class="text-muted">HR Management System</small>
+            </div>
+        </a>
+
+        <button class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+       
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registration">Registration</a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/adminlogin">Admin Login</a>
+                  </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/joinus">Join Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+
+                    <a href="/login" class="btn btn-primary rounded-pill px-4">
+
+                        <i class="fa-solid fa-user"></i>
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-sm-12" style="min-height: 600px;">
+			<div th:replace="${content}"></div>
+		</div>
+      </div>
+      <div class="row mt-2">
+		<footer class="footer">
+
+		<div class="container">
+
+		<div class="row">
+
+		<div class="col-lg-4">
+
+		<h4>HR Synergy</h4>
+
+		<p>
+
+		A modern Human Resource Management
+		System for employee management,
+		attendance, payroll and recruitment.
+
+		</p>
+
+		</div>
+
+		<div class="col-lg-2">
+
+		<h5>Quick Links</h5>
+
+		<ul>
+
+		<li><a href="#">Home</a></li>
+
+		<li><a href="#">Jobs</a></li>
+
+		<li><a href="#">Contact</a></li>
+
+		</ul>
+
+		</div>
+
+		<div class="col-lg-3">
+
+		<h5>Modules</h5>
+
+		<ul>
+
+		<li>Employee Management</li>
+
+		<li>Attendance Tracking</li>
+
+		<li>Payroll System</li>
+
+		</ul>
+
+		</div>
+
+		<div class="col-lg-3">
+
+		<h5>Contact</h5>
+
+		<p>
+
+		<i class="fa-solid fa-location-dot"></i>
+
+		Lucknow, Uttar Pradesh
+
+		</p>
+
+		<p>
+
+		<i class="fa-solid fa-envelope"></i>
+
+		support@hrsynergy.com
+
+		</p>
+
+		</div>
+
+		</div>
+
+		<hr>
+
+		<div class="text-center copyright">
+
+			© 2026 HR Synergy. All Rights Reserved.
+
+		</div>
+
+		</div>
+
+		</footer>
+        
+      </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

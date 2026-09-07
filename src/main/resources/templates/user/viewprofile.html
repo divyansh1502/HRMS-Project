@@ -1,0 +1,91 @@
+<html lang="en" th:replace="~{user/userbase :: layout(~{::main})}">
+<body>
+	<main>
+		<!--  <h1>View Your Profile</h1>
+ 	<hr/>
+ 	<table class="table table-bordered" style="width:80%;margin:auto;">
+ 	<tr>
+ 	<td>Name</td>
+ 	<td th:text="${user.name}"></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Contact No</td>
+ 	<td th:text="${user.contactno}"></td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	<td>Email Address>
+ 	<td th:text="${user.emailaddress}"></td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	<td>Qualification</td>
+ 	<td th:text="${user.qualification}"></td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	<td>KeySkill</td>
+ 	<td th:text="${user.keyskill}"></td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	<td>Address</td>
+ 	<td th:text="${user.address}"></td>
+ 	</tr>
+  	</table>-->
+		
+		<section class="container profile-page py-4 py-lg-5">
+			<div class="profile-card mx-auto">
+				<div class="profile-card-header">
+					<div>
+						<h1>View Your Profile</h1>
+						<p>View and manage your personal information.</p>
+					</div>
+					<div class="profile-icon" aria-hidden="true">
+						<i class="fa-solid fa-user"></i>
+					</div>
+				</div>
+
+				<div class="profile-details">
+					<div class="profile-field">
+						<span class="profile-label">Name</span> <strong
+							th:text="${user.name}"></strong>
+					</div>
+
+					<div class="profile-field">
+						<span class="profile-label">Contact No</span> <strong
+							th:text="${user.contactno}"></strong>
+					</div>
+
+					<div class="profile-field">
+						<span class="profile-label">Email Address</span> <strong
+							th:text="${user.emailaddress}"></strong>
+					</div>
+
+					<div class="profile-field">
+						<span class="profile-label">Qualification</span> <strong
+							th:text="${user.qualification}"></strong>
+					</div>
+
+					<div class="profile-field profile-field-wide">
+						<span class="profile-label">Key Skills</span> <strong
+							th:text="${user.keyskill}"></strong>
+					</div>
+
+					<div class="profile-field profile-field-wide">
+						<span class="profile-label">Address</span> <strong
+							th:text="${user.address}"></strong>
+					</div>
+				</div>
+
+				<div class="profile-actions">
+					<a href="#" class="btn profile-back-btn rounded-pill px-4"> <i
+						class="fa-solid fa-arrow-left me-2"></i>Back
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+		</html>

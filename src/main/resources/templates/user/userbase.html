@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout(usercontent)">
+<!-- [Head] start -->
+
+<head>
+  <title>User Dashboard</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script>
+window.addEventListener("pageshow", function (event) {
+   if(event.peristed ||
+   perform.getEntryByType("navigation")[0]?.type
+   === "back_forward") {
+	window.location.reload();
+	}
+});
+</script>
+
+   <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="user/css/style.css">
+	<link rel="icon" type="image/png" href="/user/images/favicon.jpg">
+
+</head>
+
+<body>
+<main>
+    <!-- ================= Navbar Start ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container-fluid px-4">
+
+            <!-- Logo -->
+            <a href="#" class="navbar-brand d-flex align-items-center">
+
+                <img src="images/logo.jpg" alt="Logo" width="55" height="55"
+                    class="rounded-circle border me-2">
+
+                <div>
+                    <h5 class="fw-bold text-primary mb-0">HR Synergy</h5>
+                    <small class="text-muted">HR Management System</small>
+                </div>
+
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a href="/" class="nav-link fw-semibold px-3">Home</a>
+                    </li>
+
+                   
+
+                    <li class="nav-item">
+                        <a href="joinus" class="nav-link fw-semibold px-3">Join Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="aboutus" class="nav-link fw-semibold px-3">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/contactus" class="nav-link fw-semibold px-3">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="/user/logout" class="btn btn-primary rounded-pill px-4">
+                            <i class="fa-solid fa-right-to-bracket me-2"></i>
+                            Log Out
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ================= Navbar End ================= -->
+<!--================ Sidebar + Main Layout Start ================-->
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-sm-3  p-0 " style="position:sticky; top:0px; z-index:900;">
+
+            <div class="sidebar text-white d-flex flex-column">
+
+                <!-- Brand -->
+                <div class="p-3 border-bottom border-secondary">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-shield-halved fs-3 me-2"></i>
+
+                        <div>
+                            <h5 class="mb-0 fw-bold">HR Synergy</h5>
+                            <small>Candidate Portal</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile -->
+                <div class="text-center py-4">
+
+                    <div class="profile-icon mx-auto mb-3">
+                        <i class="fa-solid fa-user fs-2"></i>
+                    </div>
+
+                    <h6 class="fw-bold mb-1">Welcome Candidate</h6>
+
+                    <span class="badge bg-success rounded-pill">
+                        Active Candidate
+                    </span>
+
+                </div>
+
+                <hr class="text-light mx-3">
+
+                <!-- Navigation -->
+                <div class="px-3">
+
+                    <small class="text-uppercase text-light opacity-75">
+                        Navigation
+                    </small>
+
+                    <ul class="nav flex-column mt-3">
+
+                        <li class="nav-item mb-2">
+                            <a href="/user/userdash" class="nav-link active-menu">
+                                <i class="fa-solid fa-table-columns me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="/user/viewjobs" class="nav-link side-link">
+                                <i class="fa-solid fa-briefcase me-2"></i>
+                                View Jobs
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="/user/giveresponse" class="nav-link side-link">
+                                <i class="fa-solid fa-file-lines me-2"></i>
+                                Give Response
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="/user/viewprofile" class="nav-link side-link">
+                                <i class="fa-solid fa-id-card me-2"></i>
+                                My Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link side-link">
+                                <i class="fa-solid fa-user-pen me-2"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="/user/changepwd" class="nav-link side-link">
+                                <i class="fa-solid fa-key me-2"></i>
+                                Change Password
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Logout -->
+                <div class="mt-auto p-3">
+					<a href="/user/logout">
+                    <button class="btn btn-outline-light w-100 rounded-pill">
+                        <i class="fa-solid fa-right-from-bracket me-2"></i>
+                        Logout
+                    </button>
+					</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Main Content Starts -->
+		<div class="col-sm-9">
+		
+					<div th:replace="${usercontent}"></div>
+			
+					
+		</div>
+<!--================ Footer =================-->
+<div class="row mt-2">
+		<footer class="footer">
+
+		<div class="container">
+
+		<div class="row">
+
+		<div class="col-lg-4">
+
+		<h4>HR Synergy</h4>
+
+		<p>
+
+		A modern Human Resource Management
+		System for employee management,
+		attendance, payroll and recruitment.
+
+		</p>
+
+		</div>
+
+		<div class="col-lg-2">
+
+		<h5>Quick Links</h5>
+
+		<ul>
+
+		<li><a href="#">Home</a></li>
+
+		<li><a href="#">Jobs</a></li>
+
+		<li><a href="#">Contact</a></li>
+
+		</ul>
+
+		</div>
+
+		<div class="col-lg-3">
+
+		<h5>Modules</h5>
+
+		<ul>
+
+		<li>Employee Management</li>
+
+		<li>Attendance Tracking</li>
+
+		<li>Payroll System</li>
+
+		</ul>
+
+		</div>
+
+		<div class="col-lg-3">
+
+		<h5>Contact</h5>
+
+		<p>
+
+		<i class="fa-solid fa-location-dot"></i>
+
+		Lucknow, Uttar Pradesh
+
+		</p>
+
+		<p>
+
+		<i class="fa-solid fa-envelope"></i>
+
+		support@hrsynergy.com
+
+		</p>
+
+		</div>
+
+		</div>
+
+		<hr>
+
+		<div class="text-center copyright">
+
+			Designed and Developed by Divyansh Singh with the help of Shagun Sahu.
+
+		</div>
+
+		</div>
+
+		</footer>
+        
+      </div>
+
+<!-- Close Main Content -->
+</div>
+
+<!-- Close Row -->
+</div>
+
+<!-- Close Container -->
+</div>
+</main>
+    <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

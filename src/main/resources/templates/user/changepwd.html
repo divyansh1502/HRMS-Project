@@ -1,0 +1,94 @@
+<html lang="en" th:replace="~{user/userbase :: layout(~{::main})}">
+<body>
+	<main>
+	<!--  
+		<h1>Change User Password</h1>
+		<h2 style="color: green; text-align: center;"></h2>
+		<div th:if="${msg}" >
+			<h3 th:text="${msg}"class="text-success"></h3>
+		</div>
+		<hr />
+		<form class="form-group" method="post" action="/user/changeapwd">
+			<table class="table table-bordered" style="margin: auto; width: 80%;">
+				<tr>
+					<td>Enter Old Password</td>
+					<td><input type="password" name="oldpassword"
+						class="form-control" required /></td>
+				</tr>
+				<tr>
+					<td>Enter New Password</td>
+					<td><input type="password" name="newpassword"
+						class="form-control" required /></td>
+				</tr>
+				<tr>
+					<td>Enter Confirm Password</td>
+					<td><input type="password" name="confirmpassword"
+						class="form-control" required /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit" class="btn btn-success">Submit</button>
+					</td>
+
+				</tr>
+			</table>
+		</form>-->
+		 <section class="container password-page py-4 py-lg-5">
+            <div class="password-card mx-auto">
+                <div class="profile-card-header password-card-header">
+                    <div>
+                        <h1>Change User Password</h1>
+                        <p>Update your account password securely.</p>
+                    </div>
+                    <div class="profile-icon" aria-hidden="true">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                </div>
+
+                <div class="password-content">
+                    <div th:if="${msg}" class="alert alert-success password-alert" role="alert">
+                        <i class="fa-solid fa-circle-check me-2"></i>
+                        <span th:text="${msg}"></span>
+                    </div>
+
+                    <form class="password-form" method="post" action="/user/changeapwd">
+                        <div class="password-field">
+                            <label for="oldpassword">Enter Old Password</label>
+                            <div class="password-input">
+                                <i class="fa-solid fa-key"></i>
+                                <input id="oldpassword" type="password" name="oldpassword" class="form-control" placeholder="Enter your old password" required />
+                            </div>
+                        </div>
+
+                        <div class="password-field">
+                            <label for="newpassword">Enter New Password</label>
+                            <div class="password-input">
+                                <i class="fa-solid fa-lock"></i>
+                                <input id="newpassword" type="password" name="newpassword" class="form-control" placeholder="Enter a new password" required />
+                            </div>
+                        </div>
+
+                        <div class="password-field">
+                            <label for="confirmpassword">Enter Confirm Password</label>
+                            <div class="password-input">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <input id="confirmpassword" type="password" name="confirmpassword" class="form-control" placeholder="Confirm your new password" required />
+                            </div>
+                        </div>
+
+                        <div class="password-actions">
+                            <a href="#" class="btn profile-back-btn rounded-pill px-4">
+                                <i class="fa-solid fa-arrow-left me-2"></i>Back
+                            </a>
+                            <button type="submit" class="btn submit-btn rounded-pill px-4">
+                                <i class="fa-solid fa-check me-2"></i>Update Password
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+	</main>
+</body>
+</html>

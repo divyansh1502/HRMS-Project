@@ -1,0 +1,52 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{admin/adminbase :: layout(~{::main})}">
+<body>
+	<main class="container py-4">
+		<h2 class="text-primary text-center mb-4">View Posted Jobs</h2>
+		<hr class="mb-4" />
+		<div th:if="${msg}">
+			<p th:text="${msg}" style="color: red; text-align: center;"></p>
+		</div>
+		<div class="card shadow-sm border-0">
+			<div class="card-body p-0">
+				<div class="table-responsive">
+					<table class="table align-middle mb-0">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Location</th>
+								<th>Salary</th>
+								<th>Job Type</th>
+								<th>Last Date</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr th:each="j : ${job}">
+								<td class="fw-semibold" th:text="${j.id}"></td>
+								<td class="fw-semibold" th:text="${j.title}"></td>
+								<td th:text="${j.description}"></td>
+								<td th:text="${j.location}"></td>
+								<td th:text="${j.salary}"></td>
+								<td><span class="badge bg-info text-dark"
+									th:text="${j.jobtype}"></span></td>
+								<td th:text="${j.lastdate}"></td>
+								<td><a th:href="@{/admin/deletejob(id=${j.id})}"
+									class="btn btn-danger btn-sm"> Delete</a></td>
+							</tr>
+
+							<tr th:if="${#lists.isEmpty(job)}">
+								<td colspan="6" class="text-center py-4 text-muted">No jobs
+									posted yet.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
